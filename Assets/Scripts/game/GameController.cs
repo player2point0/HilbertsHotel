@@ -6,66 +6,90 @@ public class GameController : MonoBehaviour
 {
     public int MaxHeight;
     public int MinHeight;
+    public int MaxWidthRight;
     public GameObject[] Rooms;
     public Transform RoomsTransform;
+    public Transform PeopleTrasfrom;
+    public GameObject Customer;
+    public GameObject Roof;
 
     private GridController gridController;
-    private List<PersonController> people = new List<PersonController>();
+    private List<PersonController> Customers = new List<PersonController>();
+    private bool DeliveryEmpty;
 
     private void Start()
     {
         gridController = FindObjectOfType<GridController>();
-        people.AddRange(GetComponentsInChildren<PersonController>());
-
-        Debug.Log(people.Count);
+        Customers.AddRange(GetComponentsInChildren<PersonController>());
+        DeliveryEmpty = true;
+        SpawnCustomer();
     }
 
     private void Update()
     {
+        DeliveryEmpty = true;
+        OpenRoof();
+
+        for(int j = 0;j<gridController.blockParents.Length; j++)
+        {
+            float x = gridController.blockParents[j].transform.position.x;
+
+            if (x > MaxWidthRight) DeliveryEmpty = false;
+        }
+
+
         for(int i = 0;i<gridController.blockParents.Length;i++)
         {
-            float y = gridController.blockParents[i].transform.position.y;
 
-            if (y >= MaxHeight)
+            BlockParentController Block = gridController.blockParents[i];
+            float y = Block.transform.position.y;
+
+            if (y >= MaxHeight && DeliveryEmpty)
             {
+                //spawn roon
                 int index = Random.Range(0, Rooms.Length);
 
                 Destroy(gridController.blockParents[i].gameObject);
 
                 gridController.blockParents[i] = Instantiate(Rooms[index], RoomsTransform).GetComponent<BlockParentController>();
+
+                DeliveryEmpty = false;
+                CloseRoof();
+                SpawnCustomer();
             }
 
             else if(y <= MinHeight)
             {
-                PersonController person = gridController.blockParents[i].GetComponent<PersonController>();
+                PersonController person = Block.GetComponentInChildren<PersonController>();
 
-                if (person == null && people.Count > 0)
+                if (person == null && Customers.Count > 0)
                 {
-                    person = people[0];
-
-                    people.RemoveAt(0);
+                    //fill romm
+                    person = Customers[0];
+                    Customers.RemoveAt(0);
 
                     person.transform.parent = gridController.blockParents[i].transform;
+                    person.GetComponent<Rigidbody>().isKinematic = true;
 
-                    //person.transform.position = Vector3.zero;
-                }
-                
+                    person.transform.position = Block.CustomerPos + Block.transform.position;
+                }   
             }
-
         }
-
-
-
     }
 
-
-    void RemoveRoom()
+    void SpawnCustomer()
     {
-
+        Customers.Add(Instantiate(Customer, PeopleTrasfrom).GetComponent<PersonController>());
     }
 
-    void FillRoom()
+    void OpenRoof()
     {
-
+        Roof.transform.position = new Vector3(0, 10, 0);
     }
+
+    void CloseRoof()
+    {
+        Roof.transform.position = new Vector3(0, 5, 0);
+    }
+
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BlockParentController : MonoBehaviour
 {
     public BlockController[] children;
+    public Vector3 CustomerPos;
 
     public bool selected = false;
     private GridController gridController;
