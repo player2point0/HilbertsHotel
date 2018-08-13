@@ -34,7 +34,7 @@ public class PersonController : MonoBehaviour
 
         if(CurrentCost < 0)
         {
-            CostImage.color = new Color(255, 87, 0, 0.5f);
+            CostImage.color = Color.red;
         }
 
     }
