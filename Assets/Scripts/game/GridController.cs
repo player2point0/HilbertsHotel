@@ -165,10 +165,10 @@ public class GridController : MonoBehaviour
             float height = walls[i].GetComponent<BoxCollider>().size.y / 2;//walls[i].transform.localScale.y/2;
             float width = walls[i].GetComponent<BoxCollider>().size.x / 2;//walls[i].transform.localScale.x/2;
 
-            //take into account height
+            //take into acLength height
             if ((pos.x < wall.x + width) && (pos.x > wall.x - width))
             {
-                //take into account width
+                //take into acLength width
                 if ((pos.y < wall.y + height) && (pos.y > wall.y - height)) result = false;
 
             }

@@ -5,40 +5,16 @@ using UnityEngine;
 
 public class SceneController : MonoBehaviour
 {
-    private Scene[] scenes;
-    private int index;
-
-
-    private void Start()
+    public void LoadMenu()
     {
-        setIndex();
+        SceneManager.LoadScene("Menu");
     }
-
-    public void loadNextScene()
+    public void LoadIntro()
     {
-        index++;
-        SceneManager.LoadSceneAsync(index);
+        SceneManager.LoadScene("Intro");
     }
-
-    public void loadMenu()
+    public void LoadGame()
     {
-        SceneManager.LoadSceneAsync("Menu");
-    }
-
-    public void restart()
-    {
-        SceneManager.LoadSceneAsync(index);
-    }
-
-    public void pause()
-    {
-        if (Time.timeScale > 0) Time.timeScale = 0;
-
-        else Time.timeScale = 1;
-    }
-
-    private void setIndex()
-    {
-        index = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene("Game");
     }
 }

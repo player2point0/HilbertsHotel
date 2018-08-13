@@ -1,25 +1,49 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PersonController : MonoBehaviour
 {
-    public string[] VoiceLines;
-
+    public Text CostText;
+    public Image CostImage;
+    public int startCost;
+    public int CurrentCost;
+    public GameObject[] Skins;
 
 	void Start ()
     {
-		
+        CurrentCost = startCost + Random.Range(0, 60);
+
+        CostText.text = "";
+        CostImage.enabled = false;
+
+        SelectRandomSkin();
 	}
-	
-	void Update ()
+
+    public void StartPriceDecrease()
     {
-		
-	}
+        CostImage.enabled = true;
+        InvokeRepeating("DecreasePrice", 0, 1);
+    }
+
+    private void DecreasePrice()
+    {
+        CurrentCost--;
+        CostText.text = CurrentCost.ToString();
+
+        if(CurrentCost < 0)
+        {
+            CostImage.color = new Color(255, 87, 0, 0.5f);
+        }
+
+    }
 
     void SelectRandomSkin()
     {
+        int index = Random.Range(0, Skins.Length);
 
+        Skins[index].SetActive(true);
     }
 
 }
