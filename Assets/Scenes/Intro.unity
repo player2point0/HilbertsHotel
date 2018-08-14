@@ -171,7 +171,7 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 1
-  m_AllowMSAA: 1
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -183,19 +183,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 151166665}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -2.2, z: -2}
+  m_LocalRotation: {x: 0, y: 0.08715578, z: 0, w: 0.9961947}
+  m_LocalPosition: {x: -1.11, y: -2.2, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &496860048 stripped
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 10, z: 0}
+--- !u!114 &580139874 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114730509039316680, guid: 6aab9bb1876ed9942ab66c4ec5886638,
+  m_CorrespondingSourceObject: {fileID: 114210722077890912, guid: 6aab9bb1876ed9942ab66c4ec5886638,
     type: 2}
   m_PrefabInternal: {fileID: 1016366397}
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1009440557 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1454562928076748, guid: 6aab9bb1876ed9942ab66c4ec5886638,
@@ -212,8 +212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425df6ef343215846a6c62f8ad16c134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MessageText: {fileID: 1916338971}
-  MessageImage: {fileID: 496860048}
+  MessageText: {fileID: 580139874}
+  MessageImage: {fileID: 1776175563}
 --- !u!1001 &1016366397
 Prefab:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4895095763883966, guid: 6aab9bb1876ed9942ab66c4ec5886638, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224502811225868110, guid: 6aab9bb1876ed9942ab66c4ec5886638,
         type: 2}
@@ -333,10 +333,46 @@ Prefab:
       propertyPath: m_Text
       value: And we gotta pay for the room, which is about 10 space doshes.
       objectReference: {fileID: 0}
+    - target: {fileID: 224104174842586492, guid: 6aab9bb1876ed9942ab66c4ec5886638,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224104174842586492, guid: 6aab9bb1876ed9942ab66c4ec5886638,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 224104174842586492, guid: 6aab9bb1876ed9942ab66c4ec5886638,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224104174842586492, guid: 6aab9bb1876ed9942ab66c4ec5886638,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224104174842586492, guid: 6aab9bb1876ed9942ab66c4ec5886638,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224104174842586492, guid: 6aab9bb1876ed9942ab66c4ec5886638,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114693685029770992, guid: 6aab9bb1876ed9942ab66c4ec5886638, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 6aab9bb1876ed9942ab66c4ec5886638, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1776175563 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114963350783955400, guid: 6aab9bb1876ed9942ab66c4ec5886638,
+    type: 2}
+  m_PrefabInternal: {fileID: 1016366397}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1809609540
 Prefab:
   m_ObjectHideFlags: 0
@@ -379,12 +415,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 293bbb58fe3011947acacad12805d59f, type: 2}
   m_IsPrefabAsset: 0
---- !u!114 &1916338971 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114317048667478490, guid: 6aab9bb1876ed9942ab66c4ec5886638,
-    type: 2}
-  m_PrefabInternal: {fileID: 1016366397}
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1927324931
 Prefab:
   m_ObjectHideFlags: 0

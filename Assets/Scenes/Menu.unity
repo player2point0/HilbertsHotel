@@ -168,7 +168,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3bd65a6b61e482b49b7fc7be835e5ffc, type: 3}
     m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
@@ -320,31 +320,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4825337797035024, guid: ebb3eee3d44affc41baf9ceee995e1fc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -10.68
+      value: -12.1
       objectReference: {fileID: 0}
     - target: {fileID: 4825337797035024, guid: ebb3eee3d44affc41baf9ceee995e1fc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 4825337797035024, guid: ebb3eee3d44affc41baf9ceee995e1fc, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.56
+      value: 0.62
       objectReference: {fileID: 0}
     - target: {fileID: 4825337797035024, guid: ebb3eee3d44affc41baf9ceee995e1fc, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.15594877
+      value: -0.13156232
       objectReference: {fileID: 0}
     - target: {fileID: 4825337797035024, guid: ebb3eee3d44affc41baf9ceee995e1fc, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.5801483
+      value: 0.5806474
       objectReference: {fileID: 0}
     - target: {fileID: 4825337797035024, guid: ebb3eee3d44affc41baf9ceee995e1fc, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.11434638
+      value: 0.09576112
       objectReference: {fileID: 0}
     - target: {fileID: 4825337797035024, guid: ebb3eee3d44affc41baf9ceee995e1fc, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.7912224
+      value: 0.7977279
       objectReference: {fileID: 0}
     - target: {fileID: 4825337797035024, guid: ebb3eee3d44affc41baf9ceee995e1fc, type: 2}
       propertyPath: m_RootOrder
@@ -356,11 +356,26 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4825337797035024, guid: ebb3eee3d44affc41baf9ceee995e1fc, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 72.5
+      value: 72.1
       objectReference: {fileID: 0}
     - target: {fileID: 4825337797035024, guid: ebb3eee3d44affc41baf9ceee995e1fc, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -22.3
+      value: -18.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 20770857340982772, guid: ebb3eee3d44affc41baf9ceee995e1fc,
+        type: 2}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 20770857340982772, guid: ebb3eee3d44affc41baf9ceee995e1fc,
+        type: 2}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20770857340982772, guid: ebb3eee3d44affc41baf9ceee995e1fc,
+        type: 2}
+      propertyPath: m_AllowMSAA
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebb3eee3d44affc41baf9ceee995e1fc, type: 2}
